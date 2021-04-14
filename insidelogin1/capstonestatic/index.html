@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--materialize css-->
+	 <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!--welcome google font-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+	<title></title>
+	<!--css file-->
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<!--mail and password icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<article id="maincontainer">
+		<div id="signin">
+			<br>
+			<br>
+			<h1 style="color: #3AA9AB;font-size: 30px;margin-left: 180px;">Sign In</h1>
+			<p style="color:grey;margin-top: 10px;margin-left: 180px;">You can sign in here..</p>
+			<!--form start-->
+			<div class="form">
+			<div class="row">
+    		<form class="col s12" action="/signin" method="post">
+      		<div class="row">
+        		<div class="input-field col s6">
+          		<i class="fa fa-envelope-o prefix" style="font-size: 30px;"></i>
+          		<input id="icon_prefix" type="text" class="validate" name="id">
+          		<label for="icon_prefix">Employee Id</label>
+          		<!--
+          		<span class="helper-text" data-error="wrong" data-success="right"></span>-->
+        		</div>
+        	</div>
+        	<div class="row" id="one">
+        		<div class="input-field col s6">
+          		<i class="fa fa-shield prefix"></i>
+          		<input id="icon_telephone" type="password" class="validate" name="password">
+          		<label for="icon_telephone">Password</label>
+        		</div>
+      		</div>
+      		<button id="signinbutton">
+				SIGN IN
+			</button>
+    		</form>
+  			</div>
+  			<br>
+  			<p style="margin-left: 40px;margin-top: -10px;">
+    		<a href="">Forgot your password?</a>
+    		</p>
+		</div>
+		</div>
+		
+		<div id="signup">
+			<br>
+			<p style="margin-top: 120px;">
+				<h1>Hello, Welcome!</h1>
+				<p>You can signup here and<br>
+				start your journey with us.</p>
+			</p>
+			<br>
+			<a href="">
+			<button id="signupbutton">
+				SIGN UP
+			</button>
+			</a>
+		</div>
+	</article>
+</body>
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

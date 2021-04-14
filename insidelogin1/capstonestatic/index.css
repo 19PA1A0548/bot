@@ -1,0 +1,96 @@
+body{
+	border: 0px;
+	padding: 0px;
+	background-color: #f0f4f3;
+	background-image: url("https://images.unsplash.com/photo-1555392660-4f93688b1f21?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTR8MTcwODI3Nnx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+}
+#maincontainer{
+	margin: auto;
+	height: 550px;
+	width: 1000px;
+	background-color: white;
+	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	-webkit-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+  	border-radius: 10px;
+}
+#signin{
+	/*background-color: red;*/
+	height: 550px;
+	width: 600px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-family: 'Noto Sans', sans-serif;
+	/*text-align: center;*/
+}
+.form{
+	margin-left:100px;
+	/*background-color: blue;*/
+}
+#one{
+	margin-top: -20px;
+}
+#signup{
+	background-color: #3AA9AB;
+	/*left: 10%;
+  	top: 10%;
+  	position: relative;
+  	transform: translate(20%, 20%);*/
+  	margin-left: 600px;
+  	margin-top: -550px;
+	height: 550px;
+	width: 400px;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	color:white;
+	font-family: 'Noto Sans', sans-serif;
+	text-align: center;
+}
+#signupbutton{
+	width: 180px;
+	padding: 17px 45px 17px 45px;
+	background-color: #3AA9AB;
+	border: 2px solid #E8E8E8;
+	color:white;
+	cursor: pointer;
+	border-radius: 50px;
+}
+#signinbutton{
+	width: 180px;
+	padding: 17px 45px 17px 45px;
+	background-color: #3AA9AB;
+	border: 2px solid white;
+	color:white;
+	cursor: pointer;
+	border-radius: 50px;
+	margin-left: 30px;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px){
+	#maincontainer{
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	/*position: absolute;*/
+	}
+	#signin{
+	/*background-color: red;*/
+	height: 100%;
+	width: 100%;
+	font-family: 'Noto Sans', sans-serif;
+	/*text-align: center;*/
+	}
+	#signup{
+	background-color: #3AA9AB;
+	height: 100%;
+	width: 100%;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	color:white;
+	font-family: 'Noto Sans', sans-serif;
+	text-align: center;
+	}
+}

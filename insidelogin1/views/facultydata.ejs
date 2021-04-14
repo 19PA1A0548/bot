@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--google font-->
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body{
+			background-color: black;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+		#m{
+			width:60%;
+			max-width:70%;
+			margin: auto;
+			height: 1200px;
+			margin-left: 200px;
+			background-color: black;
+			border: 2px solid blue;
+  			animation: animate 2s infinite;
+  			font-family: 'Josefin Sans', sans-serif;
+		}
+		@keyframes animate{
+			25%{border-color: violet;}
+  			50% {border-color: lightblue;}
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<header>
+		<h1 style="color:white;margin-left: 150px;margin-top: 50px;">Student <span style="color:#1778F2">Details</span></h1>
+	</header>
+	<br><br>
+	<div id="m">
+		<div>
+		<img src= <%= data[0].Photo %> style="margin-left: 30px;margin-top: 20px;height:200px;width:250px;">
+		<h3 style="color:white;margin-left: 450px;">Name :<span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= data[0].Name %></span><br>
+			Department : <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= data[0].Department %></span><br>
+			ID : <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= data[0].ID %></span>
+		</h3>
+		<br>
+		<hr style="border-color: #54878A;width: 90%;">
+		<h3 style="font-family: 'Josefin Sans', sans-serif;color:#1778F2;margin-left: 50px;">Personal Details</h3>
+		
+		<h3 style="color:white;margin-left: 450px;">Father Name :<span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= data[0].FatherName %></span><br>
+			D.O.B : <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= data[0].DOB %></span><br>
+			Address : <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= data[0].Address %></span>
+			<br>
+		</h3>
+		<hr style="width: 50%;border:1px solid #236475;float:left;margin-left: 350px;">
+		<br>
+		<h3 style="font-family: 'Josefin Sans', sans-serif;color:#1778F2;margin-left: 50px;">Certificates</h3>
+		<br>
+		 <%  Object.keys(data[0].Certificates).forEach(function (key) { %>
+			<h3 style="color:white;margin-left: 50px;">
+				 <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;"> <%= key %>(<%= data[0].Certificates[key].Date %>)
+				</span>
+				<br>
+				 
+			</h3>
+		<%})%>
+		<hr style="width: 50%;border:1px solid #236475;float:left;margin-left: 40px;">
+		<br>
+		<h3 style="font-family: 'Josefin Sans', sans-serif;color:#1778F2;margin-left: 50px;">Achievments</h3>
+		<br>
+		<%  Object.keys(data[0].Achievements).forEach(function (key) { %>
+			<h3 style="color:white;margin-left: 450px;">
+				Competition : <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;">  <%= key %>(<%= data[0].Achievements[key].Date %>)
+				 	</span><br>
+				 <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;">(<%= data[0].Achievements[key].Achieved %>)</span><br>
+				 <span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;">(<%= data[0].Achievements[key].Prize %>)</span>
+				
+				<br>
+				 
+			</h3>
+		<%})%>
+		<hr style="width: 50%;border:1px solid #236475;margin-left: 350px;">
+		<br>
+		<h3 style="margin-left: 50px;color:#1778F2;">
+			Cabin
+		</h3>
+		<h3 style="color:white;margin-left: 50px;">
+			Your Cabin is at : <br>
+			<span style="font-family: 'Josefin Sans', sans-serif;color:#54878A;margin-left: 70px;"> <%= data[0].Cabin %> </span>
+		</h3>
+		<br>
+		<hr style="border-color: #54878A;width: 90%;">
+		
+		<h3 style="color:#1778F2;margin-left: 350px;">Contact</h3>
+		
+			<a href=tel:+91<%= data[0].Mobile %> style="color:#54878A;text-decoration:none;margin-left:200px;" > <%= data[0].Mobile %></a><i class="fa fa-phone" style="font-size:18px;color:#54878A;margin-left: 8px;"></i>
+			<a href=mailto:<%= data[0].Email %> style="color:#54878A;text-decoration:none;margin-left:210px;">Mail</a><i class="fa fa-envelope-o" style="font-size:18px;color:#54878A;margin-left: 8px;"></i>
+	</div>
+	</div>
+</body>
+</html>
